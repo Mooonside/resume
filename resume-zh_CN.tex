@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_US
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
@@ -11,55 +12,70 @@
 \usepackage{cite}
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
+	\pagenumbering{gobble} % suppress displaying page number
+	
+	\name{陈怡峰}
+	
+	\basicInfo{
+		\email{yifengchen@zju.edu.cn} \textperiodcentered\ 
+		\phone{(+86) 138-1836-9294} \textperiodcentered\ 
+		%\linkedin[yifeng19]{https://www.linkedin.com/in/yifeng19/} \textperiodcentered\ 
+		\github[Mooonside]{https://www.github.com/Mooonside/}
+	}
+	
+	\section{\faGraduationCap\  教育背景}
+	\datedsubsection{\textbf{浙江大学}，杭州，浙江}{2018 -- 至今}
+	\textit{在读硕士研究生}\ 计算机科学与技术\ 预计 2021 年 3 月毕业\\
+	\textit{导师}\ \href{https://person.zju.edu.cn/xilics}{李玺} 
+	\datedsubsection{\textbf{上海交通大学}，上海}{2014 -- 2018}
+	\textit{学士}\ 计算机科学与技术\\
+	\textit{学积分排名}\ 31 / 150
+	
+	%\section{\faUsers\ 实习/项目经历}
+	\section{\faUsers\ 项目经历}
+	\datedsubsection{\textbf{带有双向连接和遮挡处理的全景分割模型}}{2019年6月 -- 2019年11月}
+	\role{} {CVPR2020在审中}
+	\begin{itemize}
+		\item 目的: 全景分割任务包含语义分割任务和实例分割任务。为了利用这两个任务间的互补性，需要在它们间建立联系。另外，对于实例间的遮挡问题，需要一种算法来更好地推理遮挡关系。
+		\item 方法: 针对两个任务，设计了双向的特征连接。特别地，对于实例分割到语义分割的连接，我们提出了一个可微分操作RoIInlay，使得实例中丢失的全局空间信息可以被恢复。 对于遮挡问题，我们提出了一个后处理算法，通过比较遮挡区域与候选目标在外观上的相似度来推理遮挡。
+		\item 效果: 以通用指标PQ来衡量，使用基于ResNet50的网络，该模型在COCO验证集上达到了state-of-the-art~(43.0\%)。
+	\end{itemize}
+	
+	\datedsubsection{\textbf{降低上下文耦合的语义分割模型}}{2019年3月 -- 2019年6月}
+	\begin{itemize}
+		\item 目的: 降低模型对上下文环境的依赖从而提升其泛化能力。
+		\item 方法: 通过随机擦除来构造样本对，要求模型在丢失部分上下文的情况下不仅能够正确地预测类别，对于未擦除区域特征的提取也需要有一致性，从而降低模型提取特征时对上下文环境的依赖。
+		\item 效果: 以通用指标mIoU来衡量，在原始数据集(CityScapes)上精度维持相当的情况下，模型的泛化能力增强了。对测试样例进行风格迁移后，模型的性能较原来提升了1.5\%。在一个从未见过的数据集(Apollo DataSet)上，模型的性能较原来有约2\%的提升，个别类别的提升超过 10\%。
+	\end{itemize}
 
-\name{陈怡峰}
-
-\basicInfo{
-  \email{yifengchen@zju.edu.cn} \textperiodcentered\ 
-  \phone{(+86) 138-1836-9294} \textperiodcentered\ 
-  \linkedin[yifeng19]{https://www.linkedin.com/in/yifeng19/} \textperiodcentered\ 
-  \github[Mooonside]{https://www.github.com/Mooonside/}
-}
- 
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{浙江大学}, 杭州, 浙江}{2018 -- 至今}
-\textit{在读硕士研究生}\ 计算机科学与技术, 预计 2020 年 3 月毕业
-\datedsubsection{\textbf{上海交通大学}, 上海}{2014 -- 2018}
-\textit{学士}\ 计算机科学与技术
-
-%\section{\faUsers\ 实习/项目经历}
-\section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{降低上下文耦合的语义分割模型}}{2019年3月 -- 2019年6月}
-%\role{实习}{经理: 高富帅}
-%xxx后端开发
-%\begin{itemize}
-%  \item 实现了 xxx 特性
-%  \item 后台资源占用率减少8\%
-%  \item xxx
-%\end{itemize}
-\datedsubsection{\textbf{带有双向连接的全景分割模型}}{2019年6月 -- 2019年11月}
-
-
-\section{\faCogs\ IT 技能}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Python > C++ = CUDA > C
-  \item 深度学习框架: PyTorch = MXNet > TensorFlow
-\end{itemize}
-
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-
-\section{\faInfo\ 其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  % \item 技术博客: https://mooonside.github.io/
-  \item 语言: 英语 - 熟练(CET-6 547)
-\end{itemize}
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+	\datedsubsection{\textbf{Chat Assistant}}{2017年5月5日 -- 2017年5月7日}
+	%2017年黑客马拉松青年创客奖
+	\role{上海交通大学Hackathon 2017} {负责服务器端开发}
+	\begin{itemize}
+		\item{目的: 在聊天过程中，我们经常遇到一些不熟悉的领域和词汇。这一现象在有年龄代差的人群间更加显著。为了简化切出聊天、搜索、返回聊天的过程，我们设计了这一聊天助手~(Chat Assistant)。}
+		\item 方法: 基于IBM的Watson API，对用户可能感兴趣的名词进行抽取，预先检索并返回相关信息。
+	\end{itemize}
+	
+	\section{\faCogs\ IT 技能}
+	% increase linespacing [parsep=0.5ex]
+	\begin{itemize}[parsep=0.5ex]
+		\item 编程语言: 熟悉Python，CUDA，C++等编程语言
+		\item 深度学习框架: 熟悉PyTorch，MXNet，了解TensorFlow
+	\end{itemize}
+	
+	\section{\faHeartO\ 获奖情况}
+	\datedline{\textit{电院B级奖学金~(授予前10\%)}，上海交通大学}{2015年}
+	\datedline{\textit{IBM青年创客奖}，上海交通大学Hackathon}{2017年}
+	
+	\section{\faInfo\ 其他}
+	% increase linespacing [parsep=0.5ex]
+	\begin{itemize}[parsep=0.5ex]
+		% \item 技术博客: https://mooonside.github.io/
+		\item 语言: 英语 - 熟练(CET-6 577)
+	\end{itemize}
+	
+	%% Reference
+	%\newpage
+	%\bibliographystyle{IEEETran}
+	%\bibliography{mycite}
 \end{document}
