@@ -31,11 +31,11 @@
 	\item Result: Our model based on ResNet-50 achieved state-of-the-art~(43.0\%) w.r.t PQ~(Panoptic Quality). 
 \end{itemize}
 
-\datedsubsection{\textbf{Reduce Dependency on Context for Semantic Segmentation}}{Mar.~2019 -- May.~2019}
+\datedsubsection{\textbf{Context Dependency Reduction for Semantic Segmentation}}{Mar.~2019 -- May.~2019}
 \begin{itemize}
-	\item Motivation: Recent semantic segmentation models rely heavily on context, which may hurt generalizability. To alleviate this, we design a method to reduce the dependency on context for better generalizability.
-	\item Method: For an image, we can erase some regions of it by predefined rules. For the untouched regions, we optimize our model to not only predict semantic classes correctly, but also extract consistent features.
-	\item Result: We test our model on three sets: the val set, the style-transferred val set, and an unseen dataset. While maintaining comparable results on the val set~(-0.2\%), our model outperforms the baseline by 1.5\% on the style-transferred images and 2\% for the unseen dataset w.r.t. mIoU.
+	\item Motivation: Recent semantic segmentation models rely heavily on context, which may hurt the generalizability. To alleviate this, we design a method to reduce the dependency on context.
+	\item Method: For an image, we can erase some regions of it by some predefined rules. For the untouched regions, we ask our model to not only predict semantic classes correctly but also extract consistent features.
+	\item Result: We train our model on CityScapes and test it on three sets: the \textit{val} set, the style-transferred \textit{val} set, and an unseen dataset~(Apollo). While maintaining comparable results on the \textit{val} set~(-0.2\%), our model outperforms the baseline by 1.5\% on the style-transferred \textit{val} set and 2\% for the unseen dataset w.r.t. mIoU.
 \end{itemize}
 
 \datedsubsection{\textbf{Chat Assistant}}{Mar.5~2017 -- May.7~2017}
