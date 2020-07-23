@@ -23,46 +23,59 @@
 \textit{Ranking}\ 31 / 150
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{Bidirectional Aggregation Network with Occlusion Handling for Panoptic Segmentation}} \\
-\vspace{-1em}
-{Oral Accepted by CVPR 2020}
-%\role{} {}
+\datedsubsection{\textbf{Research on Panoptic Segmentation}} {2020/05 -- Now}
+\vspace{-0.3em}
+\role{Internship} {Tencent-YouTu Lab}
+\vspace{-0.5em}
+\begin{itemize}
+\item One-stage panoptic segmentation suffers from the conflict between translation-variance and translation-invariance. I am dedicated to solving it.
+\end{itemize}
+
+\datedsubsection{\textbf{Bidirectional Aggregation Network for Panoptic Segmentation}} {2019/06 -- 2019/11} 
+\vspace{-0.3em}
+\role{Research} {Oral Accepted by CVPR 2020}
+\vspace{-0.5em}
 \begin{itemize}
 	\item Motivation: Panoptic segmentation includes semantic segmentation and instance segmentation. To alleviate the complementarity between these two tasks, we build a bidirectional connection between them. % Meanwhile, we propose a learning-free algorithm to handle the occlusion between instances.
 	\item Method: We design feature aggregation modules to enable information flow between these two tasks. Specifically, we propose a differentiable operator, RoIInlay. It can recover the lost spatial information of instances such that the recovered features can be aggregated to help semantic segmentation. 
-	\item Result: Our model based on ResNet-50 achieved state-of-the-art~(43.0\%) w.r.t PQ~(Panoptic Quality). 
+	\item Result: Our model~(ResNet-50) was \~2\% higher than our baseline and achieved S.O.T.A.~(43.0\%) w.r.t PQ. 
 \end{itemize}
 
-\datedsubsection{\textbf{Context Dependency Reduction for Semantic Segmentation}}{Mar.~2019 -- May.~2019}
+\datedsubsection{\textbf{Context Dependency Reduction for Semantic Segmentation}}{2019/03 -- 2019/05} 
+\vspace{-0.3em}
+\role{Research} {}
+\vspace{-0.5em}
 \begin{itemize}
-	\item Motivation: Recent semantic segmentation models rely heavily on context, which may hurt the generalizability. To alleviate this, we design a method to reduce the dependency on context.
-	\item Method: For an image, we can erase some regions of it by some predefined rules. For the untouched regions, we ask our model to not only predict semantic classes correctly but also extract consistent features.
+	\item Motivation: Prevalent semantic segmentation models rely heavily on context, which may hurt the generalizability. To alleviate this, we propose a method to reduce the dependency on context.
+	\item Method: For a given image, we erase some parts of it randomly under predefined rules. For the untouched regions, we ask our model to not only predict semantic classes correctly but also extract consistent features.
 	\item Result: We train our model on CityScapes and test it on three sets: the \textit{val} set, the style-transferred \textit{val} set, and an unseen dataset~(Apollo). While maintaining comparable results on the \textit{val} set~(-0.2\%), our model outperforms the baseline by 1.5\% on the style-transferred \textit{val} set and 2\% for the unseen dataset w.r.t. mIoU.
 \end{itemize}
 
-\datedsubsection{\textbf{Chat Assistant}}{Mar.5~2017 -- May.7~2017}
-\role{SJTU Hackathon 2017} {Back-end Development}
+\datedsubsection{\textbf{Chat Assistant}}{2017/05/05 -- 2017/05/07} 
+\vspace{-0.3em}
+\role{Competition} {SJTU Hackathon 2017}
+\vspace{-0.5em}
 \begin{itemize}
 	\item Motivation: When chatting with our friends on a mobile phone, we could come across some new terms. To avoid the annoying switch between searching and chatting, we design the Chatting Assistant. 
-	\item Method: Based on the Watson API~(by IBM), Chatting Assistant can automatically extract terms of interest, search them online and provide brief introductions for users.
+	\item Method: Based on the Watson API, Chatting Assistant can automatically extract terms of interest, search them online and provide brief introductions for users. Our project won the IBM Innovation Award.
 \end{itemize}
 
 
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: Familiar with Python, C++ and CUDA
-  \item Deep Learning Platform: Familiar with PyTorch and MXNet
+  \item I am familiar with CUDA and have the experience of writing, testing and intergrating a D.I.Y. operation into PyTorch.
+%  \item Deep Learning Platform: Familiar with PyTorch and MXNet
 \end{itemize}
 
 \section{\faHeartO\ Honors and Awards}
 \datedline{\textit{B-Class Scholarship~(top 10\% students)}, SJTU}{2015年}
 \datedline{\textit{IBM Innovation Award}, SJTU Hackathon}{2017年}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}
-  \item Languages: English - Fluent~(CET-6: 577)
-\end{itemize}
+%\section{\faInfo\ Miscellaneous}
+%\begin{itemize}
+%  \item Languages: English - Fluent~(CET-6: 577)
+%\end{itemize}
 
 %% Reference
 %\newpage
