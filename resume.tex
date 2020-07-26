@@ -7,71 +7,75 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
-
+\name{Yifeng Chen}
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
-
+	\email{yifengovo@gmail.com} \textperiodcentered\ 
+	\phone{(+86) 138-1836-9294} \textperiodcentered\ 人定义的 英文
+	%\linkedin[yifeng19]{https://www.linkedin.com/in/yifeng19/} \textperiodcentered\ 
+	\github[Mooonside]{https://www.github.com/Mooonside/}
+}
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{Zhejiang University}, Hangzhou, China}{2018 -- Present}
+\textit{M.E.} in  Computer Science \& Technology, expected March 2021\\
+\textit{Instructed by}\ \href{https://person.zju.edu.cn/xilics}{Prof.Xi Li}
+\datedsubsection{\textbf{Shanghai Jiao Tong University}, Shanghai, China}{2014 -- 2018}
+\textit{B.E.} in Computer Science \& Technology\\
+\textit{Ranking}\ 31 / 150
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\datedsubsection{\textbf{Research on Panoptic Segmentation}} {2020/05 -- Now}
+\vspace{-0.3em}
+\role{Internship} {Tencent-YouTu Lab}
+\vspace{-0.5em}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+\item One-stage panoptic segmentation suffers from the conflict between translation-variance and translation-invariance. I am dedicated to solving it.
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{Bidirectional Aggregation Network for Panoptic Segmentation}} {2019/06 -- 2019/11} 
+\vspace{-0.3em}
+\role{Research} {Oral Accepted by CVPR 2020}
+\vspace{-0.5em}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+	\item Motivation: Panoptic segmentation includes semantic segmentation and instance segmentation. To alleviate the complementarity between these two tasks, we build a bidirectional connection between them. % Meanwhile, we propose a learning-free algorithm to handle the occlusion between instances.
+	\item Method: We design feature aggregation modules to enable information flow between these two tasks. Specifically, we propose a differentiable operator, RoIInlay. It can recover the lost spatial information of instances such that the recovered features can be aggregated to help semantic segmentation. 
+	\item Result: Our model~(ResNet-50) was \~2\% higher than our baseline and achieved S.O.T.A.~(43.0\%) w.r.t PQ. 
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\datedsubsection{\textbf{Context Dependency Reduction for Semantic Segmentation}}{2019/03 -- 2019/05} 
+\vspace{-0.3em}
+\role{Research} {}
+\vspace{-0.5em}
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+	\item Motivation: Prevalent semantic segmentation models rely heavily on context, which may hurt the generalizability. To alleviate this, we propose a method to reduce the dependency on context.
+	\item Method: For a given image, we erase some parts of it randomly under predefined rules. For the untouched regions, we ask our model to not only predict semantic classes correctly but also extract consistent features.
+	\item Result: We train our model on CityScapes and test it on three sets: the \textit{val} set, the style-transferred \textit{val} set, and an unseen dataset~(Apollo). While maintaining comparable results on the \textit{val} set~(-0.2\%), our model outperforms the baseline by 1.5\% on the style-transferred \textit{val} set and 2\% for the unseen dataset w.r.t. mIoU.
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\datedsubsection{\textbf{Chat Assistant}}{2017/05/05 -- 2017/05/07} 
+\vspace{-0.3em}
+\role{Competition} {SJTU Hackathon 2017}
+\vspace{-0.5em}
+\begin{itemize}
+	\item Motivation: When chatting with our friends on a mobile phone, we could come across some new terms. To avoid the annoying switch between searching and chatting, we design the Chatting Assistant. 
+	\item Method: Based on the Watson API, Chatting Assistant can automatically extract terms of interest, search them online and provide brief introductions for users. Our project won the IBM Innovation Award.
+\end{itemize}
+
+
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+  \item I am familiar with CUDA and have the experience of writing, testing and intergrating a D.I.Y. operation into PyTorch.
+%  \item Deep Learning Platform: Familiar with PyTorch and MXNet
 \end{itemize}
 
 \section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\datedline{\textit{B-Class Scholarship~(top 10\% students)}, SJTU}{2015年}
+\datedline{\textit{IBM Innovation Award}, SJTU Hackathon}{2017年}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
-\end{itemize}
+%\section{\faInfo\ Miscellaneous}
+%\begin{itemize}
+%  \item Languages: English - Fluent~(CET-6: 577)
+%\end{itemize}
 
 %% Reference
 %\newpage
