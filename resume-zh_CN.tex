@@ -27,48 +27,66 @@
 	\datedsubsection{\textbf{浙江大学}，杭州，中国}{2018 -- 至今}
 	\textit{在读硕士研究生}\ 计算机科学与技术\ 预计 2021 年 3 月毕业\\
 	\textit{导师}\ \href{https://person.zju.edu.cn/xilics}{李玺} 
+	\vspace{-0.25em}
 	\datedsubsection{\textbf{上海交通大学}，上海，中国}{2014 -- 2018}
-	\textit{学士}\ 计算机科学与技术\\
-	\textit{学积分排名}\ 31 / 150
-	%\section{\faUsers\ 实习/项目经历}
+	\textit{学士}\ 计算机科学与技术
+	\vspace{-0.25em}
+	% \textit{学积分排名}\ 31 / 150
+	
 	\section{\faUsers\ 项目经历}
-	\datedsubsection{\textbf{全景分割研究}} {2020/05 -- 至今}
+	\datedsubsection{\textbf{解耦语义与位置表达的全景分割模型}} {2020/05 -- 至今}
 	\role{实习} {腾讯-优图实验室}
+	\vspace{-0.5em}
 	\begin{itemize}
-		\item 研究一阶段全景分割中网络对平移等变性和平移变化性存在冲突这一问题并提出解决方案。
+		\item 在分割任务中首创性地提出解耦语义与位置表达的建模方式。目前方案较Non Local计算量少(-90\%), 性能好(+1.2\% mIoU)；计划投稿至CVPR 2021。
 	\end{itemize}
-
-	\datedsubsection{\textbf{带有双向连接和遮挡处理的全景分割模型}}{2019/06 -- 2019/11}
-	\role{研究} {CVPR 2020 Oral接收~[第一作者]}
+	
+	\datedsubsection{\textbf{Text Ray:任意形状的文本检测模型}}{2020/01 -- 2020/04}
+	\role{研究} {ACM MM 2020 Oral接收}
+	\vspace{-0.5em}
 	\begin{itemize}
-		\item 目的: 全景分割任务包含语义分割任务和实例分割任务。为了利用这两个任务间的互补性，需要在它们间建立联系。另外，对于实例间的遮挡问题，需要一种算法来更好地推理遮挡关系。
-		\item 方法: 为了利用任务间的互补性，我们在任务间建立了双向的特征连接。具体地，我们提出了一个可微分操作RoIInlay，使得实例中丢失的空间位置可以被恢复。 对于遮挡问题，我们提出了一个后处理算法，通过比较遮挡区域与候选目标在外观上的相似度来推理遮挡。
-		\item 效果: 以通用指标PQ来衡量，使用基于ResNet50的网络，该模型在COCO数据集上达到了state-of-the-art~(43.0\%)，相较baseline提升了约2\%.
+		\item 对任意形状的文本提出了一种新颖的建模方式：把多边形轮廓简化为一个中心点和一族射线。
+		\item 使用参数化的函数来拟合射线族并提出Central Weighting和Content Loss以更好地训练模型。
+		\item 以F1-score衡量，方法在CTW1500上较baseline提升了5.5\%，达到了S.O.T.A.(78.92\%)。
+	\end{itemize}
+	
+	\datedsubsection{\textbf{带有双向连接和遮挡处理的全景分割模型}}{2019/06 -- 2019/11}
+	\role{研究} {CVPR 2020 Oral接收}
+	\vspace{-0.5em}
+	\begin{itemize}
+		\item 在语义与实例分割任务间建立双向特征连接，并设计了SIM和OCM聚合模块, 提升了1.2\% PQ。
+		\item 提出RoIInlay算子以恢复实例的空间信息。它相较其他算子速度快~(x3.6)，效果更好~(+1.0\% SQ)。
+		\item 提出遮挡处理算法，通过比较遮挡区域与候选目标在外观上的相似度来推理遮挡, 提升了2\% RQ。
+		% \item 以PQ衡量，模型(基于ResNet-50)在COCO数据集上较baseline提升了约2\%，达到了S.O.T.A.~(43.0\%).
 	\end{itemize}
 	
 	\datedsubsection{\textbf{降低上下文耦合的语义分割模型}}{2019/03 -- 2019/05}
 	\role{研究} {}
+	\vspace{-0.5em}
 	\begin{itemize}
-		\item 目的: 降低模型对上下文环境的依赖从而提升其泛化能力。
-		\item 方法: 通过随机擦除来构造样本对，要求模型在丢失部分上下文的情况下不仅能够正确地预测类别，对于未擦除区域特征的提取也需要有一致性，以降低模型提取特征时对上下文环境的依赖。
-		\item 效果: 以通用指标mIoU来衡量, 模型能在原测试集上维持精度且泛化能力更强。对风格迁移的样例，性能有1.5\%的提升。在未见过的Apollo数据集上，性能有约2\%的提升~(个别类别超过10\%)。
-	\end{itemize}
-
-	\datedsubsection{\textbf{Chat Assistant}}{2017/05/05 -- 2017/05/07}
-	%2017年黑客马拉松青年创客奖
-	\role{竞赛} {SJTU Hackathon 2017}
-	\begin{itemize}
-		\item{目的: 在聊天过程中，我们经常遇到一些不熟悉的领域和词汇。这一现象在有年龄代差的人群间更加显著。为了简化切出聊天、搜索、返回聊天的过程，我们设计了这一聊天助手~(Chat Assistant)。}
-		\item 方法: 基于IBM的Watson API，对用户可能感兴趣的名词进行抽取，预先检索并返回相关信息。
-		\item 结果: 该项目获得了当届Hackathon的IBM青年创客奖。	
+		\item 指出模型在上下文变化时泛化差，并提出了一种降低特征与上下文耦合的方法来增强泛化能力。
+		\item 通过擦除构造样本对，并在丢失上下文时要求模型对未擦除区域正确地预测类别且提取特征一致。
+		\item 以mIoU衡量，模型能在原测试集上维持精度，且对风格迁移的样例，性能有1.5\%的提升。在未见过的Apollo数据集上，性能有约2\%的提升~(个别类别超过10\%)。
 	\end{itemize}
 	
+	\section{\faFileTextO\ 论文发表}
+	\begin{itemize}
+		\item BANet: Bidirectional Aggregation Network with Occlusion Handling for Panoptic Segmentation \\
+		IEEE Conference on Computer Vision and Pattern Recognition 2020~(\textbf{CVPR 2020}; \textbf{Oral}) \\
+		\textbf{Yifeng Chen}, Guangchen Lin, Xi Li, et al. 
+		\item TextRay: Contour-based Geometric Modeling for Arbitrary-shaped Scene Text Detection \\
+		ACM International Conference on Multimedia 2020~(\textbf{ACM MM 2020}; \textbf{Oral})\\
+		Fangfang Wang, \textbf{Yifeng Chen}, Xi Li, et al. 
+	\end{itemize}
+	\vspace{-0.5em}	
+
 	\section{\faCogs\ IT 技能}
 	 % increase linespacing [parsep=0.5ex]
 	\begin{itemize}[parsep=0.5ex]
 		\item 熟悉CUDA编程，有编写测试底层操作的工程经验。
 	%	\item 深度学习框架: 熟悉PyTorch，MXNet，了解TensorFlow
 	\end{itemize}
+	\vspace{-0.5em}
 	
 	\section{\faHeartO\ 获奖情况}
 	\datedline{\textit{电院B级奖学金~(授予前10\%)}，上海交通大学}{2015年}
