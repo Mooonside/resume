@@ -10,6 +10,7 @@
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{amsmath}
 
 \begin{document}
 	\pagenumbering{gobble} % suppress displaying page number
@@ -31,14 +32,15 @@
 	\datedsubsection{\textbf{上海交通大学}，上海，中国}{2014 -- 2018}
 	\textit{学士}\ 计算机科学与技术
 	\vspace{-0.25em}
-	% \textit{学积分排名}\ 31 / 150
 	
 	\section{\faUsers\ 项目经历}
-	\datedsubsection{\textbf{解耦语义与位置表达的全景分割模型}} {2020/05 -- 至今}
+	\datedsubsection{\textbf{基于动态位置编码的全景分割模型}} {2020/05 -- 2020/11}
 	\role{实习} {腾讯-优图实验室}
 	\vspace{-0.5em}
 	\begin{itemize}
-		\item 在分割任务中首创性地提出解耦语义与位置表达的建模方式。目前方案较Non Local计算量少(-90\%), 性能好(+1.2\% mIoU)；计划投稿至CVPR 2021。
+		\item 在一阶段全景分割框架中引入动态信息编码机制。与SOTA方法相比，我们的模型运行速度相近~(11.8 FPS)，PQ提升了2.1\%至42.3\%，达到与两阶段方案接近的性能。
+		\item 动态位置信息编码机制通过IDFT参数化学习全局空间位置相关性，使其能对不同场景、任务动态地编码位置信息。在语义和实例分割分支中引入这一机制，提升了2.7\% $\text{PQ}^\text{St}$和1.5\% $\text{PQ}^\text{Th}$。
+		\item 以第一作者身份投稿至CVPR-2021。
 	\end{itemize}
 	
 	\datedsubsection{\textbf{Text Ray:任意形状的文本检测模型}}{2020/01 -- 2020/04}
@@ -80,17 +82,19 @@
 	\end{itemize}
 	\vspace{-0.5em}	
 
-	\section{\faCogs\ IT 技能}
-	 % increase linespacing [parsep=0.5ex]
-	\begin{itemize}[parsep=0.5ex]
-		\item 熟悉CUDA编程，有编写测试底层操作的工程经验。
-	%	\item 深度学习框架: 熟悉PyTorch，MXNet，了解TensorFlow
-	\end{itemize}
-	\vspace{-0.5em}
+%	\section{\faCogs\ IT 技能}
+%	 % increase linespacing [parsep=0.5ex]
+%	\begin{itemize}[parsep=0.5ex]
+%		\item 熟悉CUDA编程，有编写测试底层操作的工程经验。
+%	%	\item 深度学习框架: 熟悉PyTorch，MXNet，了解TensorFlow
+%	\end{itemize}
+%	\vspace{-0.5em}
 	
 	\section{\faHeartO\ 获奖情况}
-	\datedline{\textit{电院B级奖学金~(授予前10\%)}，上海交通大学}{2015年}
+	\datedline{\textit{国家奖学金}, 浙江大学}{2019-2020学年}
 	\datedline{\textit{IBM青年创客奖}，上海交通大学Hackathon}{2017年}
+	%\datedline{\textit{电院B级奖学金~(授予前10\%)}，上海交通大学}{2015年}
+
 	
 %	\section{\faInfo\ 其他}
 %	% increase linespacing [parsep=0.5ex]
